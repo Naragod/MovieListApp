@@ -5,23 +5,26 @@ var express = require('express');
 var gameRouter = express.Router();
 var dbHandler = require("./dbhandler")
 
+
 //Check if connection is established, and establish it if there is none.
 var checkConnection = function(req, res, next){
-
+	//Check if connection is established, and establish it if there is none.
 	if(!connection){
-		var connection = dbHandler.setConnection('localhost', 'root', 'mateo', 'dbmyapp');
-		//Error Handling. If the server cannot connect to the database the connection will terminate immediately.
+		connection = dbHandler.setConnection('localhost', 'root', 'mateo', 'dbmyapp');
+
+		//Error Handling. In case server cannot connect to database it will terminate the connection immediatelly.
 		dbHandler.connectToDB(connection, function (result){
-			//Terminate Connection
-			dbHandler.endConnection(connection);
-			//Redirect to Error page.
-			res.redirect('/error');
+			if(!result){
+				//End Connection.
+				dbHandler.endConnection(connection);
+				//Redirect user to the Error page.
+				res.redirect('/error');
+			}
 		});
-	};
+	}
 
 	next();
 };
-
 
 
 
