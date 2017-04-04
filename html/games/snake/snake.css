@@ -1,0 +1,47 @@
+
+.pellet{
+	border: 1px solid black;
+	border-radius: 5px;
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+
+	font-size: 1.5em;
+	background-color: #DAF0F8;
+
+	/* Aligns text in the center, vertically and horizontally */
+	text-align: center;
+	line-height: 83px;
+	
+}
+.snake{
+	border: 1px solid black;
+	border-radius: 3px;
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+}
+
+#animation{
+	position: absolute;
+	border-radius: 5px;
+	width: 500px;
+	height: 500px;
+	padding: 3px;
+	background-color: #ADD8E6; /* light blue color */
+	overflow: hidden;
+	
+	/* Centers the container on the page */
+	top: 50%; 
+	left: 50%;
+	margin-top: -250px;
+	margin-left: -250px;
+}
+
+.current{
+	position: absolute;
+}
+
+#content{
+	display: none;
+}

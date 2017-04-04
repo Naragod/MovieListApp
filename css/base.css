@@ -1,0 +1,39 @@
+a{
+	text-decoration: none;
+}
+
+.header{
+
+}
+
+.content{
+	text-align: center;
+}
+
+.user{
+	width: 100px;
+	border-radius: 5px;
+	border: 1px solid black;
+
+}
+
+.logout{
+	text-align: center;
+	border-radius: 5px;
+	width: 100px;
+	height: 20px;
+	background-color: #ADD8E6;
+	position: absolute;
+	float: right;
+	top: 0;
+	right: 0;
+	margin-top: 20px;
+	margin-right: 20px;
+}
+
+.HPage{
+	top: 20px;
+	right: 50px;
+	text-decoration: none;
+	position: absolute;
+}

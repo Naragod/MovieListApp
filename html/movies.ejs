@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/base.css">
+</head>
+
+<body>
+	<div class='user'>
+		<label>Welcome <%= user%></label>
+	</div>
+
+	<div class="HPage">
+		<a href="/">Home Page</a>
+	</div>
+
+		
+	
+	<div>
+		<h2>These are all the movies in our collection.</h2><br>
+		<!-- Movies -->
+		<div id='movies' style='float:left;width:calc(width - 300px);'>
+			<div>
+				<% for(var i=0; i < items.length; i++){ %>
+					<label><b>Movie:</b> <%= items[i].movieName%></label>
+					<label><b>Description:</b> <%= items[i].description%></label><br>
+				<% } %>
+			</div>
+		</div>
+
+	</div><br>
+
+	<div style='float:right;'>
+		<h3>Add a New Movie.</h3>
+		<form action='/movies' method='post'>
+			<label>Movie Name</label>
+			<input type='textbox' name="movieName"><br>
+			<label>Description</label>
+			<input type="textbox" name="desc">
+			<BUTTON>Submit</BUTTON>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+hr{
+	background-color: black;
+	position: absolute;
+}
+
+#canvas{
+	width: 500px;
+	height: 500px;
+	background-color: #894e24;
+	border: 5px solid black;
+	border-radius: 10px;
+	
+	position: absolute;
+	overflow: hidden;
+
+	top: 50%;
+	left: 50%;
+	margin-top: -250px;
+	margin-left: -250px;
+}
+
+
+.O{
+	width: 166px;
+	height: 166px;
+	position: absolute;
+	font-size: 40px;
+
+	/* Aligns Text Center */
+	text-align: center;
+	line-height: 166px;
+	margin-left: -83px;
+	margin-top: -83px;
+}
+
+.X{
+	width: 166px;
+	height: 166px;
+	position: absolute;
+	font-size: 40px;
+
+	/* Aligns Text Center */
+	text-align: center;
+	line-height: 166px;
+	margin-left: -83px;
+	margin-top: -83px;
+}
